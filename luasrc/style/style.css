@@ -474,9 +474,9 @@ input[type=submit]:hover {
 .logo-img {
     display: block;
     margin: 20px auto 10px auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 50% !important;
-    border: 2px solid #ff0055 !important;
-    box-shadow: 0 0 15px rgba(255, 0, 85, 0.6) !important;
+    max-width: 280px;
+    height: auto;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
 }
