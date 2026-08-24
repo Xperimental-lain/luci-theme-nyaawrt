@@ -1,83 +1,39 @@
-[issues]: https://github.com/derisamedia/luci-theme-nyaawrt/issues
-[issues-badge]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square
-[release]: https://github.com/derisamedia/luci-theme-nyaawrt/releases
-[release-badge]: https://img.shields.io/badge/download-check_releases-blue
-[group]: https://facebook.com/groups/indowrt
-[group-badge]: https://img.shields.io/badge/visit_Facebook-Comunity-cyan
-[discord]: https://discord.gg/gdZwmDQGUm
-[discord-badge]: https://img.shields.io/badge/visit_Discord-Comunity-blue
-[paypal]: https://www.paypal.com/paypalme/derisamedia
-[paypal-badge]: https://img.shields.io/badge/Donate-Paypal_me-blue
-[new-release]: https://github.com/derisamedia/luci-theme-Arwi
-[new-release-badge]: https://img.shields.io/badge/New_Release-luci_theme_Arwi-red
+# luci-theme-nyaawrt
 
+A Cyberpunk-themed LuCI theme for OpenWrt and NyaaWrt OS builds, featuring vibrant neon styling, a clean interface, custom wallpapers, and responsive design.
 
+## Features
+- **Cyberpunk Aesthetics**: Sleek dark mode with vibrant neon pink, cyan, and yellow accents.
+- **Custom Logo**: High-quality transparent NyaaWrt neon branding.
+- **Anime Backgrounds**: Integrated Cyberpunk-themed wallpapers for login and dashboard pages.
+- **Optimized UI**: Sharp progress bars, high contrast styling, and responsive layout for mobile and desktop screens.
+- **Based on Material and Bootstrap frameworks**.
 
-
-
-
-
+## Screenshots
 <div align="center">
+  <img src="https://raw.githubusercontent.com/Xperimental-lain/luci-theme-nyaawrt/main/luasrc/brand.png" alt="NyaaWrt Logo" width="400">
+</div>
 
-# luci-theme-nyaawrt (BETA)
+## Installation
 
-<img src="https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/luasrc/brand.png">
+To install the theme on your OpenWrt device:
 
-[![issues][issues-badge]][issues]
-[![release][release-badge]][release]
-[![group][group-badge]][group]
-[![discord][discord-badge]][discord]
-[![paypal][paypal-badge]][paypal]
-[![new-release][new-release-badge]][new-release]
+1. Clone or download the repository.
+2. Build the package or manually copy the file structure:
+   - Copy `luasrc/` content to `/www/luci-static/nyaawrt/`
+   - Copy `template/` files to `/usr/share/ucode/luci/template/themes/nyaawrt/`
+   - Copy `js/` files to `/www/luci-static/resources/`
+   - Copy `root/` files to the root system folder `/`
 
+3. Activate the theme via LuCI settings or execute:
+   ```bash
+   uci set luci.themes.NyaaWrt='/luci-static/nyaawrt'
+   uci set luci.main.mediaurlbase='/luci-static/nyaawrt'
+   uci commit luci
+   /etc/init.d/uhttpd restart
+   /etc/init.d/rpcd restart
+   ```
 
-Luci theme for Official Openwrt and NyaaWrt OS build ,based on bootstrap framework 
-and material luCi theme refferences,
-Thanks To Komunitas Device Berbasis ARM Indonesia (DBAI) for support this theme.
-This official 1'st theme in Indo-Wrt Community in indonesia. Not the result of modification from anyone, this is purely made by us
-### ©Derisamedia
-https://derisamedia.github.io/
-<summary>Preview Screenshoot</summary>
-<p>
-  
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss1.png)
-  
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss2.png)
-
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss3.png)
-
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview1.png)
-
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview2.png)
-
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview3.png)
-
-</p>
-
-# Contributors
-<a href="https://github.com/derisamedia/luci-theme-nyaawrt/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=derisamedia/luci-theme-nyaawrt" />
-</a>
-
-
-### FYI
-
-nyaawrt os is my idea which wants to develop the OpenWrt community in Indonesia, even the world, thanks to friends who have supported this nyaawrt-os theme, hopefully given health to all of us.
-
-
-(old text) Mr. Sibondt once they said 'jalan ditempat komunitas indo', that's what moved my heart to make an innovation that I named nyaawrt os (nyaawrt = initial version, because it hasn't been perfect until now 😁)
-
-### Credits
-Indowrt (indonesian Openwrt Community)
-DBAI (Device Berbasis Arm Indonesia)
-
-### frameworks
-this theme using bootstrap framework + vanilla css
-icons made by me + flaticons
-
-### Attention 
-This theme required luci-theme-nyaawrt-config installed
-
-donate
-buy me a padang rice or coffee
-https://saweria.co/derisamedia
+## Development & Credits
+- Based on the Bootstrap framework and Material theme references.
+- Maintained and customized by **Xperimental-lain**.
