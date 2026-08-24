@@ -1,26 +1,26 @@
 {#
-	NyaaPunk os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
-	luci-theme-nyaapunk
+	NyaaWrt os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
+	luci-theme-nyaawrt
 	Copyright 2024 derisamedia <facebook.com/derisamedia>
 -#}
 {% 
 	import { cursor } from 'uci';
 	let uci = cursor();
-	let config = uci.get_all("nyaapunk", "theme") || {};
+	let config = uci.get_all("nyaawrt", "theme") || {};
 	let icon = {};
 	
-	uci.foreach("nyaapunk", "navbar", function(section) {
+	uci.foreach("nyaawrt", "navbar", function(section) {
 		let address = section.address;
 		let icon_url = section.icon;
 		if (address && icon_url) {
-			icon_url = replace(icon_url, /^\/www\/luci\-static\/nyaapunk\//, "");
+			icon_url = replace(icon_url, /^\/www\/luci\-static\/nyaawrt\//, "");
 			icon[address] = icon_url;
 		}
 	});
 
 	let navbar_enabled = (config.navbar == "1");
 	let num_links = 0;
-	uci.foreach("nyaapunk", "navbar", function(section) {
+	uci.foreach("nyaawrt", "navbar", function(section) {
 		if (section.enable == "Enable") {
 			num_links++;
 		}
@@ -54,14 +54,14 @@
 
 </div>
 <footer class="mobile">
-	<a href="https://github.com/derisamedia/luci-theme-nyaapunk">{{ version.distname }} {{ version.distversion }} | NyaaPunk OS Theme v3.9.7</a>
+	<a href="https://github.com/derisamedia/luci-theme-nyaawrt">{{ version.distname }} {{ version.distversion }} | NyaaWrt OS Theme v3.9.7</a>
 </footer>
 </div>
 <div class="navbar active">
 	{% if (navbar_enabled): %}
 	<div class="dropdown">
 		{% 
-		uci.foreach("nyaapunk", "navbar", function(section) {
+		uci.foreach("nyaawrt", "navbar", function(section) {
 			let address = section.address;
 			let icon_url = icon[address] || 'default/icon.png';
 			let target_blank = (section.newtab == "Yes") ? 'target="_blank"' : '';
@@ -96,7 +96,7 @@
 }
 </script>
 </div>
-<script type="text/javascript">L.require('menu-nyaapunk')</script>
+<script type="text/javascript">L.require('menu-nyaawrt')</script>
 <script src="{{ media }}/app.js"></script>
 </body>
 </html>

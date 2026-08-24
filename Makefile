@@ -1,4 +1,4 @@
-# LuCI NyaaPunk Theme
+# LuCI NyaaWrt Theme
 # Copyright 2024 derisamedia <yuimizuno86@gmail.com>
 #
 # Licensed under the Apache License v2.0
@@ -6,8 +6,8 @@
 
 include $(TOPDIR)/rules.mk
 
-THEME_NAME:=nyaapunk
-THEME_TITLE:=NyaaPunk
+THEME_NAME:=nyaawrt
+THEME_TITLE:=NyaaWrt
 
 PKG_NAME:=luci-theme-$(THEME_NAME)
 PKG_VERSION:=3.9.7_beta2

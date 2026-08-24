@@ -1,5 +1,5 @@
-<%# NyaaPunk os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
-	luci-theme-nyaapunk Copyright 2024 derisamedia <facebook.com/derisamedia>
+<%# NyaaWrt os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
+	luci-theme-nyaawrt Copyright 2024 derisamedia <facebook.com/derisamedia>
 	Have a bug? Please create an issue here on GitHub!
 
 	luci-theme-material
@@ -16,13 +16,13 @@
 					Licensed to the public under the Apache License 2.0
 					-%>
 					<% local ver=require "luci.version" local uci=require "luci.model.uci" .cursor() local
-						config=uci:get_all("nyaapunk", "theme" ) -- Table to store navbar icons local icon={} -- Iterate
-						through all navbar entries uci:foreach("nyaapunk", "navbar" , function(section) local
+						config=uci:get_all("nyaawrt", "theme" ) -- Table to store navbar icons local icon={} -- Iterate
+						through all navbar entries uci:foreach("nyaawrt", "navbar" , function(section) local
 						address=section.address local icon_url=section.icon if address and icon_url then --
-						Remove '/www/luci-static/nyaapunk/' from icon_url
-						icon_url=string.gsub(icon_url, "^/www/luci%-static/nyaapunk/" , "" ) icon[address]=icon_url end
+						Remove '/www/luci-static/nyaawrt/' from icon_url
+						icon_url=string.gsub(icon_url, "^/www/luci%-static/nyaawrt/" , "" ) icon[address]=icon_url end
 						end) -- Check navbar enable status local navbar_enabled=config.navbar=="1" -- Calculate number
-						of enabled navbar links local num_links=0 uci:foreach("nyaapunk", "navbar" , function(section) if
+						of enabled navbar links local num_links=0 uci:foreach("nyaawrt", "navbar" , function(section) if
 						section.enable=="Enable" then num_links=num_links + 1 end end) -- Calculate link width for
 						responsive design local link_width=string.format("calc(100%% / %d)", num_links > 0 and num_links or 1) -- Retrieve
 						theme properties local background_color=config.color or '#2222359a' local
@@ -64,15 +64,15 @@
 
 						</div>
 						<footer class="mobile">
-							<a href="https://github.com/derisamedia/luci-theme-nyaapunk">
-								<%=ver.luciname%> | NyaaPunk OS Theme v3.9.7-r2
+							<a href="https://github.com/derisamedia/luci-theme-nyaawrt">
+								<%=ver.luciname%> | NyaaWrt OS Theme v3.9.7-r2
 							</a>
 						</footer>
 						</div>
 						<div class="navbar active">
 							<% if navbar_enabled then %>
 								<div class="dropdown">
-									<% uci:foreach("nyaapunk", "navbar" , function(section) local address=section.address
+									<% uci:foreach("nyaawrt", "navbar" , function(section) local address=section.address
 										local icon_url=icon[address] or 'default/icon.png' local
 										target_blank=section.newtab=="Yes" and 'target="_blank"' or '' if
 										section.enable=="Enable" then %>
@@ -101,7 +101,7 @@
 							}
 						</script>
 						</div>
-						<script type="text/javascript">L.require('menu-nyaapunk')</script>
+						<script type="text/javascript">L.require('menu-nyaawrt')</script>
 						<script src="<%=media%>/app.js"></script>
 						</body>
 

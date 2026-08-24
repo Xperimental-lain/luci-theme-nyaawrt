@@ -1,4 +1,4 @@
-name: Build luci-theme-nyaapunk APK (OpenWrt >= 24.xx)
+name: Build luci-theme-nyaawrt APK (OpenWrt >= 24.xx)
 
 on:
   workflow_dispatch:
@@ -38,14 +38,14 @@ jobs:
           cd openwrt-sdk
           # Aktifkan build APK di SDK OpenWrt terbaru via .config override
           echo "CONFIG_USE_APK=y" >> .config
-          echo "CONFIG_PACKAGE_luci-theme-nyaapunk=m" >> .config
+          echo "CONFIG_PACKAGE_luci-theme-nyaawrt=m" >> .config
 
       - name: Copy package
         run: |
-          mkdir -p openwrt-sdk/package/luci-theme-nyaapunk
+          mkdir -p openwrt-sdk/package/luci-theme-nyaawrt
           # Copy source folder contents to SDK package folder directly using rsync
           # excludes openwrt-sdk directory to prevent infinitely copying itself
-          rsync -a --exclude=openwrt-sdk/ ./ openwrt-sdk/package/luci-theme-nyaapunk/
+          rsync -a --exclude=openwrt-sdk/ ./ openwrt-sdk/package/luci-theme-nyaawrt/
 
       - name: Build package
         run: |
@@ -53,10 +53,10 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           make defconfig
-          make package/luci-theme-nyaapunk/compile V=s
+          make package/luci-theme-nyaawrt/compile V=s
 
       - name: Upload apk
         uses: actions/upload-artifact@v4
         with:
-          name: luci-theme-nyaapunk-apk
+          name: luci-theme-nyaawrt-apk
           path: openwrt-sdk/bin/packages/**/*/*.apk

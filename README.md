@@ -1,6 +1,6 @@
-[issues]: https://github.com/derisamedia/luci-theme-nyaapunk/issues
+[issues]: https://github.com/derisamedia/luci-theme-nyaawrt/issues
 [issues-badge]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square
-[release]: https://github.com/derisamedia/luci-theme-nyaapunk/releases
+[release]: https://github.com/derisamedia/luci-theme-nyaawrt/releases
 [release-badge]: https://img.shields.io/badge/download-check_releases-blue
 [group]: https://facebook.com/groups/indowrt
 [group-badge]: https://img.shields.io/badge/visit_Facebook-Comunity-cyan
@@ -19,9 +19,9 @@
 
 <div align="center">
 
-# luci-theme-nyaapunk (BETA)
+# luci-theme-nyaawrt (BETA)
 
-<img src="https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/luasrc/brand.png">
+<img src="https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/luasrc/brand.png">
 
 [![issues][issues-badge]][issues]
 [![release][release-badge]][release]
@@ -31,7 +31,7 @@
 [![new-release][new-release-badge]][new-release]
 
 
-Luci theme for Official Openwrt and NyaaPunk OS build ,based on bootstrap framework 
+Luci theme for Official Openwrt and NyaaWrt OS build ,based on bootstrap framework 
 and material luCi theme refferences,
 Thanks To Komunitas Device Berbasis ARM Indonesia (DBAI) for support this theme.
 This official 1'st theme in Indo-Wrt Community in indonesia. Not the result of modification from anyone, this is purely made by us
@@ -40,32 +40,32 @@ https://derisamedia.github.io/
 <summary>Preview Screenshoot</summary>
 <p>
   
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/ss1.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss1.png)
   
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/ss2.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss2.png)
 
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/ss3.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/ss3.png)
 
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/mobileview1.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview1.png)
 
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/mobileview2.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview2.png)
 
-![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaapunk/master/mobileview3.png)
+![image](https://raw.githubusercontent.com/derisamedia/luci-theme-nyaawrt/master/mobileview3.png)
 
 </p>
 
 # Contributors
-<a href="https://github.com/derisamedia/luci-theme-nyaapunk/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=derisamedia/luci-theme-nyaapunk" />
+<a href="https://github.com/derisamedia/luci-theme-nyaawrt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=derisamedia/luci-theme-nyaawrt" />
 </a>
 
 
 ### FYI
 
-nyaapunk os is my idea which wants to develop the OpenWrt community in Indonesia, even the world, thanks to friends who have supported this nyaapunk-os theme, hopefully given health to all of us.
+nyaawrt os is my idea which wants to develop the OpenWrt community in Indonesia, even the world, thanks to friends who have supported this nyaawrt-os theme, hopefully given health to all of us.
 
 
-(old text) Mr. Sibondt once they said 'jalan ditempat komunitas indo', that's what moved my heart to make an innovation that I named nyaapunk os (nyaapunk = initial version, because it hasn't been perfect until now 😁)
+(old text) Mr. Sibondt once they said 'jalan ditempat komunitas indo', that's what moved my heart to make an innovation that I named nyaawrt os (nyaawrt = initial version, because it hasn't been perfect until now 😁)
 
 ### Credits
 Indowrt (indonesian Openwrt Community)
@@ -76,7 +76,7 @@ this theme using bootstrap framework + vanilla css
 icons made by me + flaticons
 
 ### Attention 
-This theme required luci-theme-nyaapunk-config installed
+This theme required luci-theme-nyaawrt-config installed
 
 donate
 buy me a padang rice or coffee

@@ -10,23 +10,23 @@
 	<meta name="theme-color" content="#09c">
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="msapplication-TileColor" content="#09c">
-	<meta name="application-name" content="NyaaPunk - LuCI">
-	<meta name="apple-mobile-web-app-title" content="NyaaPunk - LuCI">
-	<link rel="stylesheet" href="/luci-static/nyaapunk/style/style.css">
-	<link rel="shortcut icon" href="/luci-static/nyaapunk/favicon.ico">
+	<meta name="application-name" content="NyaaWrt - LuCI">
+	<meta name="apple-mobile-web-app-title" content="NyaaWrt - LuCI">
+	<link rel="stylesheet" href="/luci-static/nyaawrt/style/style.css">
+	<link rel="shortcut icon" href="/luci-static/nyaawrt/favicon.ico">
 	<script src="{{ dispatcher.build_url('admin/translations', dispatcher.lang) }}"></script>
 	<script src="{{ resource }}/cbi.js"></script>
 
-	<title>NyaaPunk - Login</title>
+	<title>NyaaWrt - Login</title>
 </head>
 		
-<body class="lang_{{ dispatcher.lang }} node-main-login" data-page="" style="background-image:url('/luci-static/nyaapunk/background/login.png')">
+<body class="lang_{{ dispatcher.lang }} node-main-login" data-page="" style="background-image:url('/luci-static/nyaawrt/background/login.png')">
 	<header>
 		<div class="fill">
 			<div class="container">
 				<span class="showSide"></span>
-				<div class="logo-title">NYAAPUNK</div>
-				<img class="bawah" src="/luci-static/nyaapunk/style/openwrt20thanniversary.png" />
+				<img class="logo-img" src="/luci-static/nyaawrt/style/brand.png" />
+				<img class="bawah" src="/luci-static/nyaawrt/style/openwrt20thanniversary.png" />
 				<span class="status" id="indicators"></span>
 			</div>
 		</div>

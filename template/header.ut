@@ -1,6 +1,6 @@
 {#
-	NyaaPunk os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
-	luci-theme-nyaapunk
+	NyaaWrt os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
+	luci-theme-nyaawrt
 	Copyright 2022 derisamedia <facebook.com/derisamedia>
 -#}
 {%
@@ -37,12 +37,12 @@
 </style>
 {% endif %}
 </head>
-<body class="lang_{{ dispatcher.lang }} {% if (ctx.authsession): %}logged-in{% endif %} {% if (length(ctx.request_path) > 0): %}node-{{ join('-', ctx.request_path) }}{% else %}node-main-login{% endif %}" data-page="{{ entityencode(join('-', ctx.request_path), true) }}" style="background-image:url('/luci-static/nyaapunk/background/dashboard.png')">
+<body class="lang_{{ dispatcher.lang }} {% if (ctx.authsession): %}logged-in{% endif %} {% if (length(ctx.request_path) > 0): %}node-{{ join('-', ctx.request_path) }}{% else %}node-main-login{% endif %}" data-page="{{ entityencode(join('-', ctx.request_path), true) }}" style="background-image:url('/luci-static/nyaawrt/background/dashboard.png')">
 <header>
 	<div class="fill">
 		<div class="container">
 		<a id="logo" href="{% if (ctx.authsession): %}{{ dispatcher.build_url('admin/status/overview') }}{% else %}#{% endif %}">
-			<img src="{{ media }}/brand.png" alt="OpenWrt">
+			<span class="logo-title-nav">NYAAPUNK</span>
 		</a>
 		<div class="status" id="indicators"></div>
 		<div class="logout" >  

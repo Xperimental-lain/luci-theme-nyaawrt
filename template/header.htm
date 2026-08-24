@@ -1,5 +1,5 @@
-<%# NyaaPunk os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
-	luci-theme-nyaapunk Copyright 2022 derisamedia <facebook.com/derisamedia>
+<%# NyaaWrt os is made from me for all .. especially for indo wrt members and fan of OpenWrt or DBAI Community
+	luci-theme-nyaawrt Copyright 2022 derisamedia <facebook.com/derisamedia>
 	Have a bug? Please create an issue here on GitHub!
 
 	luci-theme-material
@@ -59,13 +59,13 @@
 						<body
 							class="lang_<%=luci.i18n.context.lang%> <% if luci.dispatcher.context.authsession then %>logged-in<% end %> <% if not (path == "") then %>node-<%= path %><% else %>node-main-login<% end %>"
 							data-page="<%= pcdata(path) %>"
-							style="background-image:url('/luci-static/nyaapunk/background/dashboard.png')">
+							style="background-image:url('/luci-static/nyaawrt/background/dashboard.png')">
 							<header>
 								<div class="fill">
 									<div class="container">
 										<a id="logo"
 											href="<% if luci.dispatcher.context.authsession then %><%=url('admin/status/overview')%><% else %>#<% end %>">
-											<img src="<%=media%>/brand.png" alt="OpenWrt">
+											<span class="logo-title-nav">NYAAPUNK</span>
 										</a>
 										<div class="status" id="indicators"></div>
 										<div class="logout">

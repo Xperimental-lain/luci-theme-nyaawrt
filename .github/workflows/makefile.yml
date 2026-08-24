@@ -1,4 +1,4 @@
-name: Build luci-theme-nyaapunk IPK (OpenWrt <= 23.xx)
+name: Build luci-theme-nyaawrt IPK (OpenWrt <= 23.xx)
 
 on:
   workflow_dispatch:
@@ -32,10 +32,10 @@ jobs:
 
       - name: Copy package
         run: |
-          mkdir -p openwrt-sdk/package/luci-theme-nyaapunk
+          mkdir -p openwrt-sdk/package/luci-theme-nyaawrt
           # Copy parent folder contents to SDK package folder directly using rsync
           # excludes openwrt-sdk directory to prevent infinitely copying itself
-          rsync -a --exclude=openwrt-sdk/ ./ openwrt-sdk/package/luci-theme-nyaapunk/
+          rsync -a --exclude=openwrt-sdk/ ./ openwrt-sdk/package/luci-theme-nyaawrt/
 
       - name: Build package
         run: |
@@ -43,10 +43,10 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           make defconfig
-          make package/luci-theme-nyaapunk/compile V=s
+          make package/luci-theme-nyaawrt/compile V=s
 
       - name: Upload ipk
         uses: actions/upload-artifact@v4
         with:
-          name: luci-theme-nyaapunk-ipk
-          path: openwrt-sdk/bin/packages/**/*/luci-theme-nyaapunk*.ipk
+          name: luci-theme-nyaawrt-ipk
+          path: openwrt-sdk/bin/packages/**/*/luci-theme-nyaawrt*.ipk
