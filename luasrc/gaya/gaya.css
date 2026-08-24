@@ -3933,3 +3933,15 @@ input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus
     font-weight: 700 !important;
     font-size: 1.05rem !important;
 }
+
+/* Styled text logo for NyaaPunk */
+.logo-title {
+    font-family: 'Quicksand-Bold', 'Fira Code', monospace;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ff0055;
+    text-align: center;
+    padding: 20px 0 0 0;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.7), 0 0 20px rgba(255, 0, 85, 0.3);
+}
