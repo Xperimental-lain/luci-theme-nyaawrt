@@ -3843,8 +3843,10 @@ p, li {
 /* Table cells and general text container elements, but not status tags */
 td:not([class*="status"]):not([class*="state"]), 
 .td:not([class*="status"]):not([class*="state"]),
-.cbi-value-field {
+.cbi-value-field,
+pre, code, .cbi-section-descr {
     color: #00f0ff !important; /* Neon Cyan */
+    font-family: 'Fira Code', 'Courier New', Courier, monospace !important; /* Hacker-style monospace values */
 }
 
 /* Accent main color (used for links, highlight, etc.) */
@@ -3852,11 +3854,13 @@ td:not([class*="status"]):not([class*="state"]),
     --main-color: #ff0055 !important; /* Neon Magenta */
 }
 
-/* Custom card style */
+/* Custom card style with neon cyber border and scanline background */
 .cbi-section, .cbi-section-node, [data-tab-title], #maincontent>.container {
-    background-color: rgba(10, 10, 18, 0.92) !important; /* Dark Cyberpunk background */
+    background-color: rgba(10, 10, 18, 0.94) !important; /* Dark Cyberpunk background */
     border: 1px solid #ff0055 !important; /* Magenta border */
-    box-shadow: 0 0 15px rgba(255, 0, 85, 0.2) !important; /* Pink glow */
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.3), inset 0 0 10px rgba(0, 240, 255, 0.05) !important; /* Pink glow + inner cyan glow */
+    background-image: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%) !important; /* Subtle scanline texture */
+    background-size: 100% 4px !important;
 }
 
 /* Inputs and textareas */
@@ -3865,6 +3869,15 @@ input[type=text], input[type=password], select, textarea {
     border: 1px solid #00f0ff !important;
     color: #00f0ff !important;
     font-weight: 600 !important;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace !important;
+    box-shadow: 0 0 5px rgba(0, 240, 255, 0.2) !important;
+}
+
+/* Focus states for inputs */
+input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus {
+    border-color: #ffe600 !important; /* Shift to Yellow on focus */
+    box-shadow: 0 0 12px rgba(255, 230, 0, 0.5) !important;
+    background-color: #12122d !important;
 }
 
 /* Buttons and interactive elements */
@@ -3875,10 +3888,48 @@ input[type=text], input[type=password], select, textarea {
     font-weight: 700 !important;
     box-shadow: 0 0 8px rgba(0, 240, 255, 0.3) !important;
     transition: all 0.2s ease-in-out !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.cbi-button:hover, input[type=submit]:hover, input[type=button]:hover {
+/* Glitch animation on hover */
+@keyframes glitch-hover {
+    0% { text-shadow: 1px -1px 0 #ff0055, -1px 1px 0 #00f0ff; }
+    33% { text-shadow: -1px 1px 0 #ff0055, 1px -1px 0 #00f0ff; }
+    66% { text-shadow: 1px 1px 0 #ff0055, -1px -1px 0 #00f0ff; }
+    100% { text-shadow: -1px -1px 0 #ff0055, 1px 1px 0 #00f0ff; }
+}
+
+.cbi-button:hover, input[type=submit]:hover, input[type=button]:hover, .nav>li>a:hover {
     background-color: #00f0ff !important;
     color: #12121f !important;
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.7) !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.8) !important;
+    animation: glitch-hover 0.25s infinite linear;
+}
+
+/* Side navigation active item glow */
+.main>.main-left>.nav>.slide>.menu.active, 
+.main>.main-left>.nav>li>.active {
+    color: #ffe600 !important; /* Yellow for active navigation */
+    border-left: 3px solid #ff0055 !important;
+    text-shadow: 0 0 5px rgba(255, 230, 0, 0.5) !important;
+}
+
+/* Progress Bar Cyberpunk Overrides */
+.cbi-progressbar {
+    background-color: rgba(10, 10, 18, 0.6) !important;
+    border: 1px solid #ff0055 !important;
+    box-shadow: 0 0 8px rgba(255, 0, 85, 0.2) !important;
+}
+
+.cbi-progressbar>div {
+    background: #ff003c !important; /* Neon Red progress bar fill */
+    box-shadow: 0 0 8px rgba(255, 0, 60, 0.5) !important; /* Neon Red glow */
+}
+
+.cbi-progressbar::after {
+    text-shadow: none !important; /* Remove blur/distort shadow */
+    color: #ffffff !important; /* Crisp white text for readability */
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
 }
