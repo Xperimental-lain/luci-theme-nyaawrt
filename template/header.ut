@@ -42,7 +42,7 @@
 	<div class="fill">
 		<div class="container">
 		<a id="logo" href="{% if (ctx.authsession): %}{{ dispatcher.build_url('admin/status/overview') }}{% else %}#{% endif %}">
-			<span class="logo-title-nav">NYAAPUNK</span>
+			<img src="{{ media }}/brand.png" alt="OpenWrt">
 		</a>
 		<div class="status" id="indicators"></div>
 		<div class="logout" >  

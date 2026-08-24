@@ -479,4 +479,5 @@ input[type=submit]:hover {
     border-radius: 0 !important;
     border: none !important;
     box-shadow: none !important;
+    mix-blend-mode: screen !important;
 }
