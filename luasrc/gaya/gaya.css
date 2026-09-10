@@ -3944,3 +3944,96 @@ input[type=text]:focus, input[type=password]:focus, select:focus, textarea:focus
     border: none !important;
     box-shadow: none !important;
 }
+
+
+/* NyaaWrt Live Widgets & Header Badges */
+.nyaa-widget-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 12px;
+  font-family: Inter-Medium, sans-serif;
+  font-size: 12px;
+}
+
+.nyaa-badge {
+  background: rgba(20, 20, 35, 0.75);
+  color: #e0e0ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nyaa-badge.temp-green {
+  border-color: #00ff9d;
+  color: #00ff9d;
+  box-shadow: 0 0 8px rgba(0, 255, 157, 0.3);
+}
+
+.nyaa-badge.temp-yellow {
+  border-color: #ffb703;
+  color: #ffb703;
+  box-shadow: 0 0 8px rgba(255, 183, 3, 0.3);
+}
+
+.nyaa-badge.temp-red {
+  border-color: #ff0055;
+  color: #ff0055;
+  box-shadow: 0 0 8px rgba(255, 0, 85, 0.4);
+}
+
+.nyaa-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nyaa-toggle-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Light Mode Styling Overrides */
+body.light-mode {
+  background-color: #f4f6f9 !important;
+  color: #1a1a2e !important;
+}
+
+body.light-mode .main-left {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .nyaa-badge {
+  background: rgba(240, 242, 248, 0.9);
+  color: #111;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .nyaa-widget-bar {
+    font-size: 10px;
+    gap: 4px;
+  }
+  #nyaa-speed, #nyaa-ram {
+    display: none;
+  }
+}
