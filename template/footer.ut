@@ -7,17 +7,7 @@
 	import { cursor } from 'uci';
 	let uci = cursor();
 	let config = uci.get_all("nyaawrt", "theme") || {};
-	let icon = {};
 	
-	uci.foreach("nyaawrt", "navbar", function(section) {
-		let address = section.address;
-		let icon_url = section.icon;
-		if (address && icon_url) {
-			icon_url = replace(icon_url, /^\/www\/luci\-static\/nyaawrt\//, "");
-			icon[address] = icon_url;
-		}
-	});
-
 	let navbar_enabled = (config.navbar == "1");
 	let num_links = 0;
 	uci.foreach("nyaawrt", "navbar", function(section) {
@@ -63,13 +53,15 @@
 		{% 
 		uci.foreach("nyaawrt", "navbar", function(section) {
 			let address = section.address;
-			let icon_url = icon[address] || 'default/icon.png';
+			let icon_url = section.icon || 'gaya/icon/navbar/overview.png';
+			icon_url = replace(icon_url, /^\/www\/luci\-static\/nyaawrt\//, "");
+			icon_url = replace(icon_url, /^\/luci\-static\/nyaawrt\//, "");
 			let target_blank = (section.newtab == "Yes") ? 'target="_blank"' : '';
 
 			if (section.enable == "Enable") {
 		%}
-			<a href="{{ address }}" {{ target_blank }}>
-				<img src="{{ media }}/{{ icon_url }}" />
+			<a href="{{ address }}" {{ target_blank }} title="{{ entityencode(section.name ?? '') }}">
+				<img src="{{ media }}/{{ icon_url }}" alt="{{ entityencode(section.name ?? '') }}" />
 			</a>
 		{% 
 			}
