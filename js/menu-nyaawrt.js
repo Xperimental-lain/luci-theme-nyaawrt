@@ -34,6 +34,30 @@ return baseclass.extend({
       document.querySelector(".main-left").style.transform = "translateX(-20rem)";
     }
     window.addEventListener("resize", this.handleSidebarToggle, true);
+
+    // Smart Fallback Handler for Navbar Shortcuts
+    document.querySelectorAll(".navbar .dropdown a").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        var href = link.getAttribute("href");
+        if (!href || href === "#") return;
+        
+        e.preventDefault();
+        fetch(href, { method: "HEAD", credentials: "same-origin" }).then(function (resp) {
+          if (resp.status === 404) {
+            var fallback = "/cgi-bin/luci/admin/status/overview";
+            if (href.indexOf("ttyd") !== -1) fallback = "/cgi-bin/luci/admin/system/system";
+            else if (href.indexOf("openclash") !== -1) fallback = "/cgi-bin/luci/admin/network/firewall";
+            else if (href.indexOf("neko") !== -1) fallback = "/cgi-bin/luci/admin/status/syslog";
+            else if (href.indexOf("modem") !== -1) fallback = "/cgi-bin/luci/admin/network/network";
+            window.location.href = fallback;
+          } else {
+            window.location.href = href;
+          }
+        }).catch(function () {
+          window.location.href = href;
+        });
+      });
+    });
   },
   handleMenuExpand: function (ev) {
     var a = ev.target,

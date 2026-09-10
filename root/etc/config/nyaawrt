@@ -12,41 +12,41 @@ config navbar
 	option address '/cgi-bin/luci/admin/status/overview'
 
 config navbar
-	option name 'Network'
+	option name 'Terminal'
 	option enable 'Enable'
 	option line '2'
 	option newtab 'No'
-	option icon 'gaya/icon/navbar/network.png'
-	option address '/cgi-bin/luci/admin/network/network'
+	option icon 'gaya/icon/navbar/terminal.png'
+	option address '/cgi-bin/luci/admin/services/ttyd'
 
 config navbar
-	option name 'Firewall'
+	option name 'OpenClash'
 	option enable 'Enable'
 	option line '3'
 	option newtab 'No'
-	option icon 'gaya/icon/navbar/modem.png'
-	option address '/cgi-bin/luci/admin/network/firewall'
+	option icon 'gaya/icon/navbar/openclash.png'
+	option address '/cgi-bin/luci/admin/services/openclash'
 
 config navbar
-	option name 'System'
+	option name 'Neko'
 	option enable 'Enable'
 	option line '4'
 	option newtab 'No'
-	option icon 'gaya/icon/navbar/terminal.png'
-	option address '/cgi-bin/luci/admin/system/system'
+	option icon 'gaya/icon/navbar/neko.png'
+	option address '/cgi-bin/luci/admin/services/neko'
 
 config navbar
-	option name 'Software'
+	option name 'Modem'
 	option enable 'Enable'
 	option line '5'
 	option newtab 'No'
-	option icon 'gaya/icon/navbar/filemanager.png'
-	option address '/cgi-bin/luci/admin/system/opkg'
+	option icon 'gaya/icon/navbar/modem.png'
+	option address '/cgi-bin/luci/admin/modem/main'
 
 config navbar
-	option name 'System Log'
+	option name 'Network'
 	option enable 'Enable'
 	option line '6'
 	option newtab 'No'
-	option icon 'gaya/icon/navbar/neko.png'
-	option address '/cgi-bin/luci/admin/status/syslog'
+	option icon 'gaya/icon/navbar/network.png'
+	option address '/cgi-bin/luci/admin/network/network'
